@@ -1,0 +1,32 @@
+# 运行时数据（绝不可提交）
+data/
+*.bak
+*.log
+*.sqlite
+*.sqlite-journal
+
+# 依赖与构建缓存
+node_modules/
+frontend/node_modules/
+frontend/dist/
+.vite/
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# 本地配置（真实部署的私密配置不进仓库）
+.env
+.env.local
+.env.*.local
+
+# 发布与审计产物
+deployment-audits/
+/public/release.json
+__pycache__/
+
+# 演示数据（tools/seed-demo.js 生成，可随时重建）
+demo-data/

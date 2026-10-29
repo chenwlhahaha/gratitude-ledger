@@ -1,0 +1,9 @@
+# 仓库地址请替换为你的实际地址（chenwlhahaha/gratitude-ledger）
+blank_issues_enabled: false
+contact_links:
+  - name: 使用问题与经验交流
+    url: https://github.com/chenwlhahaha/gratitude-ledger/discussions
+    about: 部署、初始化、日常使用等非缺陷问题，请先到 Discussions 搜索或提问。
+  - name: 安全问题（私密报告）
+    url: https://github.com/chenwlhahaha/gratitude-ledger/security/advisories/new
+    about: 漏洞或数据泄露风险请走私密报告，不要公开提交 Issue。

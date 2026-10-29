@@ -1,0 +1,75 @@
+name: 新班级接入
+description: 咨询如何为你的班级/学习小组部署一套实例
+title: "[New Class] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        欢迎使用。每个班级部署一份独立实例，数据保存在部署者自己的服务器上。
+
+        提问前请先读 [README](https://github.com/chenwlhahaha/gratitude-ledger/blob/main/README.md)、[部署指南](https://github.com/chenwlhahaha/gratitude-ledger/blob/main/docs/deploy.md) 和 [管理员使用指南](https://github.com/chenwlhahaha/gratitude-ledger/blob/main/docs/setup.md)。
+
+        **隐私提醒**：不要在这里提交真实学员名单、家书内容、登录码或服务器地址。
+
+  - type: input
+    id: class-size
+    attributes:
+      label: 班级规模
+      description: 大约多少位成员、多少个小组。
+      placeholder: 例如：30 人，5 个小组
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: 部署环境
+      options:
+        - 已有 Linux 服务器（自建）
+        - 云服务器（阿里云 / 腾讯云 / AWS 等）
+        - NAS / 家庭服务器
+        - 仅本机试用
+        - 还不确定
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: 想使用的功能
+      description: 你们目前怎么记录打卡、家书和积分？哪些环节最想搬到系统里？
+      placeholder: 例如：现在用表格记读书打卡，想用家书轮值和月度报表。
+    validations:
+      required: true
+
+  - type: textarea
+    id: questions
+    attributes:
+      label: 具体问题
+      description: 部署、初始化、权限、备份或迁移中卡住的地方。
+    validations:
+      required: true
+
+  - type: dropdown
+    id: data-plan
+    attributes:
+      label: 数据与备份安排
+      description: 是否已有 HTTPS、备份和访问控制方案？
+      options:
+        - 已规划 HTTPS 与定期备份
+        - 有计划但还没做
+        - 需要建议
+        - 仅本地试用，不涉及真实数据
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认
+      options:
+        - label: 我已阅读部署与使用文档。
+          required: true
+        - label: 本 Issue 不含真实学员信息、登录码或服务器凭据。
+          required: true

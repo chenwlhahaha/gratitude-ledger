@@ -1,0 +1,95 @@
+name: 缺陷报告
+description: 报告一个可复现的问题（请勿包含真实学员数据）
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。提交前请先搜索已有 Issue，避免重复。
+
+        **隐私提醒**：不要粘贴真实姓名、家书内容、登录码、服务器 IP、域名或截图中的个人信息。请用"示例班""学员甲"等占位，并尽量使用合成数据复现。
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 问题描述
+      description: 实际发生了什么？期望的结果是什么？
+      placeholder: 例如：在小组页点击"本周家书"后页面空白，刷新仍空白；期望显示轮值列表。
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 从打开哪个页面开始，按顺序写清操作。
+      placeholder: |
+        1. 以组长身份登录示例班第一组
+        2. 进入"家书"页
+        3. 点击"本周家书"
+        4. 页面空白
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为
+    validations:
+      required: false
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: 受影响模块
+      multiple: true
+      options:
+        - 登录 / 初始化
+        - 今日打卡
+        - 家书与点评
+        - 小组页 / 排行 / 荣誉
+        - 我的记录
+        - 管理控制台
+        - CSV 导出
+        - 部署 / 备份
+        - 其他
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 版本 / 提交
+      description: 项目版本（如 v1.0.0）或提交哈希。
+      placeholder: v1.0.0
+    validations:
+      required: true
+
+  - type: input
+    id: env
+    attributes:
+      label: 运行环境
+      description: Node 版本、操作系统、浏览器及版本、是否使用反向代理。
+      placeholder: Node 20.11 / Ubuntu 22.04 / iOS Safari 17 / Nginx
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志或报错
+      description: 服务端日志、浏览器控制台报错（请先脱敏）。
+      render: shell
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认
+      options:
+        - label: 我已搜索过已有 Issue，没有找到相同问题。
+          required: true
+        - label: 本报告不包含任何真实学员数据、登录码或服务器信息。
+          required: true
