@@ -1,5 +1,8 @@
 # gratitude-ledger · 班级学习收益核算系统
 
+[![CI](https://github.com/chenwlhahaha/gratitude-ledger/actions/workflows/ci.yml/badge.svg)](https://github.com/chenwlhahaha/gratitude-ledger/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 一个给盛和塾式学习小组用的打卡、家书与积分应用：每天读书打卡、每周轮值写家书并互相点评、登记周会和大课、按班级自己的收支标准核算"学习收益"，并支持班委在 PC 控制台做组织管理、审批与月度报表。
 
 后端是一个**零运行时依赖**的 Node 18 单文件服务，数据存在一个 JSON 文件里；前端是 Vue 3 + Vant 4，构建产物已提交到 `public/`，服务端直接托管。每个班级部署一份自己的实例，数据互不相通。
